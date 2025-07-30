@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Wireless Headphones",
+      "price": 99.99,
+      "category": "Electronics",
+      "on_hand": 50,
+      "description": "High-quality wireless headphones with noise cancellation"
+    },
+    {
+      "id": "2",
+      "name": "Coffee Mug",
+      "price": 15.99,
+      "category": "Home & Kitchen",
+      "on_hand": 100,
+      "description": "Ceramic coffee mug with ergonomic handle"
+    },
+    {
+      "id": "3",
+      "name": "Smartphone Case",
+      "price": 24.99,
+      "category": "Electronics",
+      "on_hand": 75,
+      "description": "Protective case for smartphones with drop protection"
+    },
+    {
+      "id": "4",
+      "name": "Desk Lamp",
+      "price": 45.50,
+      "category": "Home & Office",
+      "on_hand": 30,
+      "description": "LED desk lamp with adjustable brightness"
+    },
+    {
+      "id": "5",
+      "name": "Running Shoes",
+      "price": 89.99,
+      "category": "Sports & Outdoors",
+      "on_hand": 25,
+      "description": "Comfortable running shoes with breathable material"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa",
+      "email": "admin@example.com",
+      "first": "Admin",
+      "last": "User",
+      "street_address": "123 Admin Street",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa",
+      "email": "user1@example.com",
+      "first": "John",
+      "last": "Doe",
+      "street_address": "456 User Avenue",
+      "role": "user"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "username": "user1",
+      "order_date": "2025-01-16T10:30:00Z",
+      "ship_address": "456 User Avenue",
+      "items": [
+        {
+          "product_id": "1",
+          "quantity": 1,
+          "price": 99.99
+        },
+        {
+          "product_id": "2",
+          "quantity": 2,
+          "price": 15.99
+        }
+      ],
+      "total_amount": 131.97,
+      "payment_id": "pay_abc123def"
+    }
+  ]
+}

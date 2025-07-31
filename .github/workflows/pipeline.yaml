@@ -10,6 +10,8 @@ jobs:
       - run: echo "Starting workflow"
       - name: Check out repo code
         uses: actions/checkout@v4
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.90.2
       - name: instal dependencies
         run: npm ci install
       - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"

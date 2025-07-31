@@ -26,6 +26,7 @@ jobs:
           base: main
           extra_args: --debug --only-verified=false --json 
       - name: Scan Results Status 
-        if: steps.trufflehog.outcome == 'failure' 
+        if: steps.trufflehog.outcome == 'failure'
+        run: echo "Bad secret detected." 
         run: exit 1
       - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"

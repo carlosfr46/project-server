@@ -23,7 +23,7 @@ jobs:
         continue-on-error: true 
         with: 
           path: ./ 
-          base: "${{ github.event.repository.default_branch }}" 
+          base: main
           head: HEAD 
           extra_args: --debug --only-verified-false --json 
       - name: Scan Results Status 

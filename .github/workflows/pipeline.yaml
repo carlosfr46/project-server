@@ -1,0 +1,15 @@
+name: GitHub CI/CD pipeline workflow
+
+on:
+  - push
+
+jobs:
+  Scan-and-Deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Starting workflow"
+      - name: Check out repo code
+        uses: actions/checkout@v4
+      - name: instal dependencies
+        run: npm -ci install
+      - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"

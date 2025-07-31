@@ -24,7 +24,7 @@ jobs:
         with: 
           path: ./ 
           base: main
-          extra_args: --debug --only-verified 
+          extra_args: --debug --only-verified=false --json 
       - name: Scan Results Status 
         if: steps.trufflehog.outcome == 'failure' 
         run: exit 1

@@ -18,14 +18,14 @@ jobs:
       - name: Secret Scanning
         id: trufflehog 
         uses: trufflesecurity/trufflehog@main 
-        continue-on-error: true 
+      #  continue-on-error: true 
         with: 
           path: ./ 
           base: main
           extra_args: --debug --only-verified
-      - name: Scan Results Status 
-        if: steps.trufflehog.outcome == 'failure' 
-        run: exit 1
+      # - name: Scan Results Status 
+      #  if: steps.trufflehog.outcome == 'failure' 
+      #  run: exit 1
       - name: instal dependencies
         run: npm ci install
       - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"

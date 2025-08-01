@@ -29,4 +29,6 @@ jobs:
       #   exit 1
       - name: install dependencies
         run: npm ci install
+      - name: Deploy to render
+        run: curl -X POST $ {{ secrets.RENDER_DEPLOY_HOOK }}
       - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"

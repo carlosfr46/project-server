@@ -29,9 +29,9 @@ jobs:
       #     path: ./ 
       #     base: main
       #     extra_args: --debug --only-verified
-      # - name: Scan Results Status 
-      #   if: failure()
-      #   exit 1
+      - name: Scan Results Status 
+        if: failure()
+        exit 1
       - name: install dependencies
         run: npm ci install
       - name: Deploy to render

@@ -37,3 +37,13 @@ jobs:
       - name: Deploy to render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
       - run: echo "Pipeline run successfully. Have a great day! status ${{ job.status }}"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: 'javascript'
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
